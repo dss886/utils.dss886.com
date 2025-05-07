@@ -8,8 +8,8 @@ export interface CalculatorState {
 }
 
 export enum WinningMethod {
-  RON = 'ron',
-  TSUMO = 'tsumo'
+  RON = "ron",
+  TSUMO = "tsumo"
 }
 
 export interface PointCalculation {

@@ -1,0 +1,15 @@
+node_modules/**
+packages/**/*.js
+**/lib/**/*.js
+*.d.ts
+**/dist/**/*.js
+
+.DS_Store
+.env
+.pnpm-debug.log
+only_dev.js
+.vscode
+
+dist
+lib
+node_modules

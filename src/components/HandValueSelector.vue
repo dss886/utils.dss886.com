@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue';
-import { HAN_OPTIONS, FU_OPTIONS } from '../utils/constants';
+import { HAN_OPTIONS } from '../utils/constants';
 import { WinningMethod } from '../types/mahjong';
 import { isFuSelectionNeeded, getAvailableFuOptions } from '../utils/calculationUtils';
 
@@ -22,11 +22,11 @@ const availableFuOptions = ref<number[]>([]);
 watch(
   () => [props.han, props.winningMethod],
   ([newHan, newWinningMethod]) => {
-    const showFuSelection = isFuSelectionNeeded(newHan);
+    const showFuSelection = isFuSelectionNeeded(newHan as number);
     emit('update:showFuSelection', showFuSelection);
     
     if (showFuSelection) {
-      availableFuOptions.value = getAvailableFuOptions(newHan, newWinningMethod);
+      availableFuOptions.value = getAvailableFuOptions(newHan as number, newWinningMethod as WinningMethod);
       
       // Set default fu if current fu is not available
       if (!availableFuOptions.value.includes(props.fu)) {

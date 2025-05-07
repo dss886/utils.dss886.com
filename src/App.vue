@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import MahjongCalculator from './components/MahjongCalculator.vue';
+import MahjongCalculator from "./components/MahjongCalculator.vue";
 </script>
 
 <template>

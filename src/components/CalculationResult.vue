@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { PointCalculation, WinningMethod } from '../types/mahjong';
+import { PointCalculation, WinningMethod } from "../types/mahjong";
 
 defineProps<{
   result: PointCalculation | null;
@@ -13,12 +13,12 @@ defineProps<{
 <template>
   <div v-if="result" class="calculation-result card">
     <h3>计算结果 (Result)</h3>
-    
+
     <div class="total-points">
       <div class="point-label">总点数 (Total)</div>
       <div class="point-value">{{ result.total }}</div>
     </div>
-    
+
     <div class="payment-details">
       <template v-if="winningMethod === WinningMethod.RON">
         <div class="payment-item">
@@ -30,13 +30,13 @@ defineProps<{
           <div class="point-value">{{ result.paymentDetails.losingPlayer }}</div>
         </div>
       </template>
-      
+
       <template v-else>
         <div v-if="isDealer" class="payment-item">
           <div class="point-label">每个闲家支付 (Non-dealers pay)</div>
           <div class="point-value">{{ result.paymentDetails.nonDealer }}</div>
         </div>
-        
+
         <template v-else>
           <div class="payment-item">
             <div class="point-label">庄家支付 (Dealer pays)</div>
@@ -49,15 +49,15 @@ defineProps<{
         </template>
       </template>
     </div>
-    
+
     <div class="calculation-info">
       <div class="info-row">
         <div class="info-label">角色 (Role):</div>
-        <div class="info-value">{{ isDealer ? '庄家 (Dealer)' : '闲家 (Non-dealer)' }}</div>
+        <div class="info-value">{{ isDealer ? "庄家 (Dealer)" : "闲家 (Non-dealer)" }}</div>
       </div>
       <div class="info-row">
         <div class="info-label">和牌方式 (Win):</div>
-        <div class="info-value">{{ winningMethod === WinningMethod.RON ? '荣和 (Ron)' : '自摸 (Tsumo)' }}</div>
+        <div class="info-value">{{ winningMethod === WinningMethod.RON ? "荣和 (Ron)" : "自摸 (Tsumo)" }}</div>
       </div>
       <div class="info-row">
         <div class="info-label">番数 (Han):</div>
