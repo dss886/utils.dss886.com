@@ -42,8 +42,8 @@ calculateResult();
 <template>
   <div class="mahjong-calculator">
     <div class="header">
-      <h1>麻将点数计算器</h1>
-      <h2>Mahjong Point Calculator</h2>
+      <h1>立直麻将点数计算器</h1>
+      <h2>RiiChi Mahjong Point Calculator</h2>
     </div>
     
     <PlayerRoleSelector 

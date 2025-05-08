@@ -1,7 +1,9 @@
 <script setup lang="ts"></script>
 
 <template>
-  <RouterView />
+  <div class="app-container">
+    <div>404</div>
+  </div>
 </template>
 
 <style></style>
