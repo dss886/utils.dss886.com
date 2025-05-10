@@ -8,5 +8,6 @@
         "TSUMO",
         "Yakuman"
     ],
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2
 }

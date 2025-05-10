@@ -17,7 +17,6 @@ npm run build
 
 cd dist
 ln -s index.html 404.html
-
 echo 'utils.dss886.com' > CNAME;
 
 git init
