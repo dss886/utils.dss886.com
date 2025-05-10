@@ -1,7 +1,7 @@
 import { createWebHistory, createRouter } from "vue-router";
-import MainView from "./pages/main/MainView.vue";
-import MajPointsView from "./pages/maj-points/MajPointsView.vue";
-import NotFoundView from "./pages/not-found/NotFoundView.vue";
+import MainView from "./pages/main/MainPage.vue";
+import MajPointsView from "./pages/maj-points/MajPointsPage.vue";
+import NotFoundView from "./pages/not-found/NotFoundPage.vue";
 
 const routes = [
   { path: "/", name: "main", component: MainView, meta: { title: "首页" } },
